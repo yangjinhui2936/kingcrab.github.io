@@ -1,65 +1,65 @@
 ---
-title: ���ʹ��mkcdoc��github�ϲ���̬��վ
+title: 如何使用mkcdoc在github上部署静态网站
 hide:
   - toc
 ---
 
-* ͨ��github/gitee page������ҳ���������foam/obsidian/markdown�ʼǣ�
-* ʡ��һ�������obsidian publish��8����/��
+* 通过github/gitee page生成网页，分享你的foam/obsidian/markdown笔记！
+* 省事一点可以用obsidian publish，8美刀/月
 
 [English Version](https://github.com/Jackiexiao/foam-mkdocs-template/blob/master/README.md)
 
-Ū��֮�������վ��������ӣ�
+弄好之后你的网站长这个样子：
 ![foam-mkdocs-template-png](demo-mkdocs.png)
 
 
-## ����
+## 样例
 
 * [github page](https://jackiexiao.github.io/foam-mkdocs-template/)
-* ���ڷ���[gitee page](https://jackiegeek.gitee.io/foam-mkdocs-template/)
+* 国内访问[gitee page](https://jackiegeek.gitee.io/foam-mkdocs-template/)
 
-## ʹ�÷���������github page���ɲ�����վ
+## 使用方法：部署到github page生成博客网站
 
-1. ����Fork������������ֿ�
-2. ���� `.github  mkdocs.yml requirements.txt` ����Ĳֿ����棬�½�һ�� docs �ļ���
-3. ������ĵ����ӵ�`docs`���棨ԭ�����ļ�����ȫ��ɾ��������`docs`������һ��`index.md`��Ϊ��վ��ҳ�������У�
-4. ����`mkdocs.yml`�޸�`site_name`Ϊ�����վ���ƣ�����ļ�����������վ�����ã��������ý̳̼���������ʹ��Ĭ�����ã������ˣ���ʱ�����Լ����ڣ���
+1. 复制Fork或者下载这个仓库
+2. 复制 `.github  mkdocs.yml requirements.txt` 到你的仓库下面，新建一个 docs 文件夹
+3. 将你的文档添加到`docs`下面（原来的文件可以全部删掉），在`docs`吓添加一个`index.md`作为网站主页（必须有）
+4. 进入`mkdocs.yml`修改`site_name`为你的网站名称，这个文件包含了你网站的配置，具体配置教程见（可以先使用默认配置，够用了，有时间再自己折腾）：
 * [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
 * [mkdocs](https://www.mkdocs.org/user-guide/configuration/)
-5. push�ύ�޸ĵ�github
-6. �����github�ֿ�-setting������github page��ѡ���֧-gh-pages����һС�ᣬ�ͻ�����ַ���������ҵ���`jackiexiao.github.io/blog/`
-7. �󹦸�ɣ�
+5. push提交修改到github
+6. 到你的github仓库-setting中设置github page，选择分支-gh-pages，等一小会，就会有网址啦，比如我的是`jackiexiao.github.io/blog/`
+7. 大功告成！
 
-֮����git push�Ϳ����Զ�������ҳ�����ɲ��ͣ�����Ϊgithub action�������ã�����Ȥ�����Լ�����һ�¡�
+之所以git push就可以自动部署网页，生成博客，是因为github action在起作用！感兴趣可以自己搜索一下。
 
-## ͬ��������Gitee page���ٹ��ڷ���
+## 同步发布到Gitee page加速国内访问
 
-����ܼ򵥣��������[����](https://jackiegeek.gitee.io/blog/)����Gitee����ҳ���½��ֿ⣬��ҳ���·�ѡ��`�������вֿ�`, ��д���github�ֿ��ַ��Ȼ����`����`->`Gitee Page`->`�����֧`->ѡ��`gh-pages`�����`����`��������������ˢ����Ϳ��Կ����Լ�gitee apge�������ˡ�����Ҫע����ǣ�ÿ�θ���Gitee page������Ҫ3������
+步骤很简单，比如这个[博客](https://jackiegeek.gitee.io/blog/)，在Gitee的首页下新建仓库，在页面下方选择`导入已有仓库`, 填写你的github仓库地址，然后点击`服务`->`Gitee Page`->`部署分支`->选择`gh-pages`，点击`更新`就完成啦！几秒后刷新你就可以看到自己gitee apge的链接了。不过要注意的是，每次更新Gitee page，你需要3个步骤
 
-1. �������github�ֿ�
-2. ��Gitee���ֶ����ͬ��github
-3. ��ǰ��Ĳ��裬�ٴβ���Gitee Page 
+1. 更新你的github仓库
+2. 在Gitee中手动点击同步github
+3. 按前面的步骤，再次部署Gitee Page 
 
-## ���ز���
+## 本地部署
 
-�����Եģ�������Ҫ���ز����ĵ���������Ƶ�����޸ĺ�Ԥ������򵥵ķ����ǽ�������ļ��У��ֿⱾ�ص�ַ��Ҳ����`docs`�ļ��е���һ���������python��Ҫ3.6����
+经常性的，我们需要本地部署文档，来进行频繁的修改和预览。最简单的方法是进入你的文件夹（仓库本地地址，也就是`docs`文件夹的上一级），你的python需要3.6以上
 ```
 pip install -U -r requirements.txt
 mkdocs serve 
 ```
-Ȼ�����`http://127.0.0.1:8000/`�Ϳ�����
+然后访问`http://127.0.0.1:8000/`就可以了
 
-## ����
+## 其他
 
-���ģ��ʹ�õĿ�
+这个模板使用的库
 * [mkdocs](https://www.mkdocs.org/user-guide/configuration/)
 * [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
 * [mkdocs-roamlinks-plugin](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin)
 
-## ֧�ֵ��﷨
-���ģ��Ὣmarkdown�е����ӽ�������ҳ֧�ֵĸ�ʽ��֧�ֵĸ�ʽ����
+## 支持的语法
+这个模板会将markdown中的链接解析成网页支持的格式，支持的格式如下
 
-| ԭʼ                  | ת����                             |
+| 原始                  | 转换后                             |
 | ----------------------- | ----------------------------------- |
 | `[Git Flow](git_flow.md)` | `[Git Flow](../software/git_flow.md)` |
 | `[[Git Flow]]`            | `[Git Flow](../software/git_flow.md)` |
