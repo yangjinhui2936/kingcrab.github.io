@@ -1,80 +1,39 @@
 ---
+title: Deep Learning Courses
 hide:
-  - navigation
   - toc
 ---
 
-<style>
-/*
-  over-ride default margins for markdown content in material
-*/
-.md-main__inner {
-  margin-top: 0;
-}
-.md-main__inner.md-grid {
-    margin: 0;
-    max-width: 100vw;
-}
-.md-content__inner {
-  margin: 0;
-  padding: 0;
-}
-.md-content__inner::before {
-  height: 0;
-}
-</style>
+# Full Stack Deep Learning Courses
 
-<div class="primary-swapped-bg-fg m-0">
-  <div class="grid-2 items-center pb-2 md-grid">
-    <img src="images/pancakes.svg" style="max-height: 12rem; auto;" draggable="false" class="swap-first m-auto">
-    <div class="mb-8 mx-2 swap-last">
-      <h1> </h1>
-      <h2><strong>{{ config.site_description }}</strong></h2>
-      <p><br></p>
-      <a href="https://www.scale.bythebay.io/llm-workshop" class="md-button md-button--primary">
-        Sign up for our latest course!
-      </a>
-    </div>
-  </div>
+The **Full Stack Deep Learning** course started in 2018, as a three-day bootcamp hosted on Berkeley campus.
+Since then, we've hosted several in-person bootcamps, online courses, and official university courses.
+
+!!! note "Looking for the most recent FSDL materials?"
+    You can find them [here](./2022/index.md).
+
+## Testimonials
+
+<div class="testimonials">
+  <a href="https://twitter.com/borisdayma/status/1281281082604871681">
+    <img style="border: 1px solid gray;" src="/images/testimonial-00.jpg" width="640px" loading="lazy" alt="Tweet praising the FSDL course">
+  </a>
+  <a href="https://twitter.com/chipro/status/1156416625400172544">
+    <img style="border: 1px solid gray;" src="/images/testimonial-01.jpg" width="640px" loading="lazy" alt="Tweet praising the FSDL course">
+  </a>
+  <a href="https://twitter.com/carranzadanielh/status/1329521631216144385">
+    <img style="border: 1px solid gray;" src="/images/testimonial-02.jpg" width="640px" loading="lazy" alt="Tweet praising the FSDL course">
+  </a>
+  <a href="https://twitter.com/blissfulchar/status/1281413848205889537">
+    <img style="border: 1px solid gray;" src="/images/testimonial-03.jpg" width="640px" loading="lazy" alt="Tweet praising the FSDL course">
+  </a>
 </div>
 
-<div class="grid-2 items-center px-2 py-4 md-grid">
-  <div class="mb-4 swap-last">
-      <h2>Building an AI-powered product is much more than just training a model or writing a prompt.</h2>
-      <br>
-      <p>The Full Stack brings people together to learn and share best practices across the entire lifecycle of an AI-powered product:
-          from defining the problem and picking a GPU or foundation model to production deployment and continual learning
-          to user experience design.
-      </p>
-  </div>
-  <img src="images/full_stack_description.png" class="swap-first">
-</div>
-
-<div class="primary-swapped-bg-fg">
-  <div class="grid-2 items-center py-4 px-2 md-grid">
-    <a href="llm-bootcamp"><img src="llm-bootcamp/opengraph.png"></a>
-    <div class="mb-4">
-        <h2>Get up to speed on the latest in AI-powered apps with the new <a href="llm-bootcamp">Large Language Models Bootcamp</a>.</h2>
-        <br>
-        <p>
-          Learn best practices and tools for building applications powered by LLMs. </p> <p> Cover the full stack from <a href="llm-bootcamp/prompt-engineering">prompt engineering</a> and <a href="llm-bootcamp/llmops">LLMops</a> to <a href="llm-bootcamp/ux-for-luis">user experience design</a>.
-        </p>
-    </div>
-  </div>
-</div>
-
-<div class="grid-2 items-center px-2 py-4 md-grid">
-  <a href="course"><img src="images/positioning.png" class="swap-first" draggable="false"></a>
-  <div class="swap-last">
-      <h2>Build an AI-powered application from the ground up in our <a href="course">Deep Learning Course</a>.</h2>
-      <p>
-        You've trained your first (or 100th) model, and you're ready to take your skills to the next level.
-      </p>
-      <p>
-          Join thousands from <a href="https://bit.ly/berkeleyfsdl">UC Berkeley</a>,
-          <a href="https://bit.ly/uwfsdl">University of Washington</a>, and <a
-              href="https://youtube.com/c/FullStackDeepLearning">all over the world</a>
-          and learn best practices for building AI-powered products from scratch with deep neural networks.
-      </p>
-  </div>
-</div>
+## Past Iterations
+- [FSDL 2022 (Online)](./2022/index.md): A fully online course, taught via YouTube, Crowdcast, and Discord.
+- [FSDL 2021 (Online)](../spring2021/index.md): Contemporaneous with the Berkeley course, we taught an online cohort course.
+- [FSDL 2021 (Berkeley)](https://bit.ly/berkeleyfsdl): Taught as a UC Berkeley undergrad course CS194-080 in Spring 2021
+- [FSDL 2020 (UW)](https://bit.ly/uwfsdl): Taught as University of Washington Professional Master's Program course CSEP 590C in Spring 2020
+- [FSDL 2019 (Online)](https://fall2019.fullstackdeeplearning.com): Materials from the November 2019 bootcamp held on Berkeley campus organized in a nice online format.
+- [FSDL 2019 (Bootcamp)]('/march2019.html'): Raw materials from the March 2019 bootcamp, held on Berkeley campus.
+- [FSDL 2018 (Bootcamp)]('/august2018.html'): Our first bootcamp, held on Berkeley campus in August 2018
