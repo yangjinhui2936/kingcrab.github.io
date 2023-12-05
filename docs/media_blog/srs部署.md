@@ -1,35 +1,35 @@
-# srs ²¿Êğ
-[ÎÄµµÀ´Ô´](https://ossrs.io/lts/zh-cn/docs/v5/doc/getting-started-build)
+# srs éƒ¨ç½²
+[æ–‡æ¡£æ¥æº](https://ossrs.io/lts/zh-cn/docs/v5/doc/getting-started-build)
 ## Live Streaming
-Ö±²¥ÊÇSRSµÄµäĞÍ³¡¾°£¬Ö§³ÖÍÆÖ±²¥Á÷ºó¶àÖÖ¹Û¿´·½Ê½¡£
+ç›´æ’­æ˜¯SRSçš„å…¸å‹åœºæ™¯ï¼Œæ”¯æŒæ¨ç›´æ’­æµåå¤šç§è§‚çœ‹æ–¹å¼ã€‚
 
-ÏÂÔØÔ´Âë£¬ÍÆ¼öÓÃUbuntu20£º
+ä¸‹è½½æºç ï¼Œæ¨èç”¨Ubuntu20ï¼š
 ```shell
 git clone -b develop https://gitee.com/ossrs/srs.git
 ```
-±àÒë£¬×¢ÒâĞèÒªÇĞ»»µ½srs/trunkÄ¿Â¼£º
+ç¼–è¯‘ï¼Œæ³¨æ„éœ€è¦åˆ‡æ¢åˆ°srs/trunkç›®å½•ï¼š
 ```shell
 cd srs/trunk
 ./configure
 make
 ```
-Æô¶¯·şÎñÆ÷£º
+å¯åŠ¨æœåŠ¡å™¨ï¼š
 ```shell
 ./objs/srs -c conf/srs.conf
 ```
-¼ì²éSRSÊÇ·ñ³É¹¦Æô¶¯£¬¿ÉÒÔ´ò¿ª http://localhost:8080/ £¬»òÕßÖ´ĞĞÃüÁî£º
+æ£€æŸ¥SRSæ˜¯å¦æˆåŠŸå¯åŠ¨ï¼Œå¯ä»¥æ‰“å¼€ http://localhost:8080/ ï¼Œæˆ–è€…æ‰§è¡Œå‘½ä»¤ï¼š
 
-# ²é¿´SRSµÄ×´Ì¬
+# æŸ¥çœ‹SRSçš„çŠ¶æ€
 ```shell
 ./etc/init.d/srs status
 ```
 
-# »òÕß¿´SRSµÄÈÕÖ¾
+# æˆ–è€…çœ‹SRSçš„æ—¥å¿—
 ```shell
 tail -n 30 -f ./objs/srs.log
 
 ```
-ÀıÈç£¬ÏÂÃæµÄÃüÁîÏÔÊ¾SRSÕıÔÚÔËĞĞ£º
+ä¾‹å¦‚ï¼Œä¸‹é¢çš„å‘½ä»¤æ˜¾ç¤ºSRSæ­£åœ¨è¿è¡Œï¼š
 ```shell
 MB0:trunk $ ./etc/init.d/srs status
 SRS(pid 90408) is running.                                 [  OK  ]
@@ -38,13 +38,13 @@ MB0:trunk $ tail -n 30 -f ./objs/srs.log
 [2021-08-13 10:30:36.634][Trace][90408][12c97232] Hybrid cpu=0.00%,0MB, cid=1,1, timer=61,0,0, clock=0,22,25,0,0,0,0,1,0
 
 ```
-Ê¹ÓÃ FFmpeg(µã»÷ÏÂÔØ) »ò OBS(µã»÷ÏÂÔØ) ÍÆÁ÷£º
+ä½¿ç”¨ FFmpeg(ç‚¹å‡»ä¸‹è½½) æˆ– OBS(ç‚¹å‡»ä¸‹è½½) æ¨æµï¼š
 ```
 ffmpeg -re -i ./doc/source.flv -c copy -f flv rtmp://localhost/live/livestream
 ```
-Note: ÊµÀıÎÄ¼ş./doc/source.flvÔÚSRSµÄÔ´´úÂëÄ¿Â¼ÖĞÓĞ¡£
+Note: å®ä¾‹æ–‡ä»¶./doc/source.flvåœ¨SRSçš„æºä»£ç ç›®å½•ä¸­æœ‰ã€‚
 
-´ò¿ªÏÂÃæµÄÒ³Ãæ²¥·ÅÁ÷£¨ÈôSRS²»ÔÚ±¾»ú£¬Çë½«localhost¸ü»»³É·şÎñÆ÷IP£©:
+æ‰“å¼€ä¸‹é¢çš„é¡µé¢æ’­æ”¾æµï¼ˆè‹¥SRSä¸åœ¨æœ¬æœºï¼Œè¯·å°†localhostæ›´æ¢æˆæœåŠ¡å™¨IPï¼‰:
 
 RTMP (by VLC): rtmp://localhost/live/livestream
 H5(HTTP-FLV): http://localhost:8080/live/livestream.flv
