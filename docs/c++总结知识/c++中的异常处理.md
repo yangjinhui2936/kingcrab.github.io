@@ -1,17 +1,17 @@
-#c++�е��쳣����
+#c++中的异常处理
 ## try..catch
-���ǿ��Խ��� C++ �쳣����������������쳣�������������������쳣���﷨Ϊ��
+我们可以借助 C++ 异常机制来捕获上面的异常，避免程序崩溃。捕获异常的语法为：
 
 ```c++
 try{
-    // �����׳��쳣����� ���磺
-    throw "Unknown Exception";  //�׳��쳣
+    // 可能抛出异常的语句 例如：
+    throw "Unknown Exception";  //抛出异常
 }catch(exceptionType variable){
-    // �����쳣�����
+    // 处理异常的语句
 }
 ```
-## �򵥵��쳣����
-throw�׳�һ���쳣���ͣ�cathͨ���ж��Ƿ���Ϻ��߽�ȥ��
+## 简单的异常场景
+throw抛出一个异常类型，cath通过判断是否符合后走进去。
 
 ```c++
 #include <iostream>
@@ -39,15 +39,15 @@ int main()
   }
   catch(std::exception& e)
   {
-    //�����Ĵ���
+    //其他的错误
   }
 }
 
 ```
 
 
-## �����������쳣����
-ͨ���ж϶�������;����׳��ĸ��쳣��
+## 将对象用作异常类型
+通过判断对象的类型决定抛出哪个异常。
 ```c++
 // exception constructor
 #include <iostream>       // std::cout
@@ -75,7 +75,7 @@ int main () {
 ```
 
 ## std::exception
-��c++11�У�exception�౻����Ϊ
+在c++11中，exception类被定义为
 
 ```c++
 class exception {
@@ -87,10 +87,10 @@ public:
   virtual const char* what() const noexcept;
 }
 ```
-exceptions�д���һЩ�쳣�жϵĺ������������쳣����
+exceptions中存在一些异常判断的函数可以用作异常处理
 
 ![img](img/exceptions_in_cpp.png)
-���庯��
+具体函数
 
 ![Alt text](img/image12.png)
-[�����cplusplus](https://cplusplus.com/reference/exception/exception/)
+[详情见cplusplus](https://cplusplus.com/reference/exception/exception/)
